@@ -1,0 +1,8 @@
+#!/bin/bash
+APT=`basename "$0"`
+if [ $1 == "sync" ]
+then
+    sudo /usr/bin/$APT update && sudo /usr/bin/$APT upgrade ${@:2}
+else
+    sudo /usr/bin/$APT $@
+fi
