@@ -4,5 +4,5 @@ if [ $1 == "sync" ]
 then
     sudo /usr/bin/$APT update && sudo /usr/bin/$APT dist-upgrade ${@:2}
 else
-    sudo /usr/bin/$APT $@
+    /usr/bin/$APT $@
 fi
